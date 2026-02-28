@@ -13,13 +13,12 @@
 * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
 body {background:#fff; color:#222; line-height:1.6;}
 header {background:#0b1d59; padding:15px 0; position:sticky; top:0; z-index:1000;}
-header .container {display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto; padding:0 20px;}
-header .logo img {height:50px;}
+header .container {display:flex; justify-content:flex-end; align-items:center; max-width:1200px; margin:auto; padding:0 20px;}
 header ul {list-style:none; display:flex; gap:20px;}
 header ul li a {color:#fff; text-decoration:none; font-weight:500; transition:0.3s;}
 header ul li a:hover {color:#00aaff;}
 .hero {
-    background: url('https://images.unsplash.com/photo-1554224154-22dec7ec8818?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1600') center/cover no-repeat;
+    background: url('https://c8.alamy.com/comp/P39TA1/little-boy-and-cute-girl-in-business-suits-working-in-the-office-together-P39TA1.jpg') center/cover no-repeat;
     color:#fff; text-align:center; padding:120px 20px;
 }
 .hero h1 {font-size:48px; margin-bottom:20px;}
@@ -37,7 +36,7 @@ section h2 {text-align:center; font-size:36px; margin-bottom:40px; color:#0b1d59
 .why-list li {background:#0b1d59; color:#fff; padding:15px 25px; border-radius:5px; font-weight:500;}
 .stat {background:#0b1d59; color:#fff; padding:30px 20px; border-radius:10px; text-align:center;}
 .stat h3 {font-size:32px; margin-bottom:10px;}
-#team img {border-radius:50%; margin-bottom:15px; width:150px; height:150px; object-fit:cover;}
+#team img{border-radius:50%; margin-bottom:15px; width:150px; height:150px; object-fit:cover;}
 #reviews .card {font-style:italic; color:#555;}
 .faq-item {margin-bottom:20px;}
 .faq-item h4 {cursor:pointer; background:#f1f1f1; padding:15px; border-radius:5px;}
@@ -48,16 +47,16 @@ section h2 {text-align:center; font-size:36px; margin-bottom:40px; color:#0b1d59
 .social-icons a:hover {color:#00aaff;}
 .whatsapp {position:fixed; bottom:20px; right:20px; background:#25d366; color:#fff; padding:15px; border-radius:50%; font-size:24px; z-index:1000; transition:0.3s;}
 .whatsapp:hover {background:#1ebe57;}
-@media(max-width:768px){header ul{flex-direction:column; background:#0b1d59; position:absolute; top:60px; right:-100%; width:200px; transition:0.3s;} header ul.show{right:0;}}
+@media(max-width:768px){
+    header ul{flex-direction:column; background:#0b1d59; position:absolute; top:60px; right:-100%; width:200px; transition:0.3s;} 
+    header ul.show{right:0;}
+}
 </style>
 </head>
 <body>
 
 <header>
 <div class="container nav">
-<div class="logo">
-    <img src="https://images.unsplash.com/photo-1591012911209-4f45ee6e8f5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200" alt="ZeetaxSolutions Logo">
-</div>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
@@ -130,26 +129,32 @@ section h2 {text-align:center; font-size:36px; margin-bottom:40px; color:#0b1d59
 <div class="container">
 <h2>Our Team</h2>
 <div class="grid">
+
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1603415526960-f7e0328a6cf7?crop=entropy&cs=tinysrgb&fit=crop&h=150&w=150" alt="CEO">
+    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=crop&h=150&w=150" alt="CEO">
     <h3>CEO & Founder</h3>
   </div>
+
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a4?crop=entropy&cs=tinysrgb&fit=crop&h=150&w=150" alt="Senior Tax Consultant">
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=crop&h=150&w=150" alt="Senior Tax Consultant">
     <h3>Senior Tax Consultant</h3>
   </div>
+
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a4?crop=entropy&cs=tinysrgb&fit=crop&h=150&w=150" alt="Corporate Advisor">
+    <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=crop&h=150&w=150" alt="Corporate Advisor">
     <h3>Corporate Advisor</h3>
   </div>
+
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=entropy&cs=tinysrgb&fit=crop&h=150&w=150" alt="Legal Advisor">
+    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?crop=entropy&cs=tinysrgb&fit=crop&h=150&w=150" alt="Legal Advisor">
     <h3>Legal Advisor</h3>
   </div>
+
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=entropy&cs=tinysrgb&fit=crop&h=150&w=150" alt="Tax Consultant">
+    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?crop=entropy&cs=tinysrgb&fit=crop&h=150&w=150" alt="Tax Consultant">
     <h3>Tax Consultant</h3>
   </div>
+
 </div>
 </div>
 </section>
