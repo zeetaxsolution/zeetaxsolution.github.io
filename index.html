@@ -1,204 +1,273 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZeetaxSolutions | Professional Tax & Corporate Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>ZeetaxSolutions | Professional Tax & Corporate Experts</title>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{color:#0a1f5c;background:#fff;scroll-behavior:smooth;}
-a{text-decoration:none;color:inherit;}
-img{max-width:100%;display:block;}
+body{background:#fff;color:#222;overflow-x:hidden;}
 
-header{position:sticky;top:0;background:#0a1f5c;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:15px 50px;z-index:1000;}
-header img{height:55px;}
-nav a{margin-left:25px;font-weight:500;color:#fff;transition:0.3s;}
-nav a:hover{color:#cbd6ff;}
+.container{max-width:1200px;margin:auto;padding:0 20px;}
 
-.hero{position:relative;color:white;text-align:center;padding:140px 20px;overflow:hidden;background:linear-gradient(135deg,#0a1f5c,#122f8a);}
-.hero h1{font-size:48px;margin-bottom:20px;line-height:1.2;}
-.hero p{max-width:700px;margin:20px auto 40px;}
-.btn{background:white;color:#0a1f5c;padding:15px 35px;border-radius:30px;font-weight:600;transition:0.3s;display:inline-block;}
-.btn:hover{background:#cbd6ff;color:#0a1f5c;}
-.hero .blob{position:absolute;border-radius:50%;opacity:0.15;animation:rotate 25s linear infinite;}
-.hero .blob1{width:400px;height:400px;top:-100px;left:-100px;background:radial-gradient(circle,#cbd6ff,#0a1f5c);}
-.hero .blob2{width:300px;height:300px;bottom:-50px;right:-50px;background:radial-gradient(circle,#0a1f5c,#cbd6ff);animation-direction:reverse;}
-@keyframes rotate{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+header{
+background:#0b1d59;
+padding:15px 0;
+position:fixed;
+width:100%;
+z-index:1000;
+}
 
-.section{padding:80px 20px;text-align:center;position:relative;overflow:hidden;}
-.section h2{font-size:36px;margin-bottom:50px;display:inline-block;position:relative;}
-.section h2::after{content:'';width:60px;height:4px;background:#0a1f5c;display:block;margin:10px auto 0;border-radius:2px;}
+.nav{display:flex;justify-content:space-between;align-items:center;}
 
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;max-width:1100px;margin:auto;position:relative;z-index:1;}
-.card{background:#f5f7ff;padding:30px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.1);transition:0.4s;opacity:0;transform:translateY(50px);}
-.card:hover{transform:translateY(-10px);box-shadow:0 12px 30px rgba(0,0,0,0.2);}
-.card img{width:60px;margin-bottom:15px;}
+.logo{color:#fff;font-size:24px;font-weight:700;}
 
-.curved{position:absolute;width:200%;height:150px;background:#0a1f5c;border-radius:50%;left:-50%;top:-60px;z-index:0;transform:rotate(-3deg);}
+nav ul{list-style:none;display:flex;gap:25px;}
+nav ul li a{color:#fff;text-decoration:none;font-weight:500;transition:.3s;}
+nav ul li a:hover{color:#00aaff;}
 
-.stats{background:#0a1f5c;color:white;display:flex;justify-content:space-around;flex-wrap:wrap;padding:80px 20px;position:relative;}
-.stat{margin:20px;text-align:center;}
-.stat h3{font-size:45px;margin-bottom:10px;}
-.stat p{font-weight:500;}
+.menu-toggle{display:none;font-size:22px;color:#fff;cursor:pointer;}
 
-.testimonials{background:#f5f7ff;padding:80px 20px;position:relative;}
-.testimonial-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1100px;margin:auto;position:relative;z-index:1;}
-.testimonial{background:white;padding:30px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.1);opacity:0;transform:translateY(50px);transition:1s;}
-.testimonial img{width:60px;border-radius:50%;margin-bottom:15px;}
-.testimonial p{font-style:italic;margin-bottom:15px;}
-.testimonial h4{font-weight:600;}
+.hero{
+height:100vh;
+background:linear-gradient(rgba(11,29,89,0.85),rgba(11,29,89,0.85)),
+url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85') center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+padding:20px;
+}
 
-.contact-form{max-width:600px;margin:auto;}
-.contact-form input, .contact-form textarea{width:100%;padding:12px;margin-bottom:15px;border-radius:5px;border:1px solid #ccc;}
-.contact-form button{background:#0a1f5c;color:white;padding:12px 30px;border:none;border-radius:30px;font-weight:600;cursor:pointer;transition:0.3s;}
-.contact-form button:hover{background:#122f8a;}
+.hero h1{font-size:50px;margin-bottom:20px;animation:fadeIn 2s;}
+.hero p{font-size:20px;margin-bottom:30px;}
 
-footer{background:#0a1f5c;color:white;padding:60px 20px;text-align:center;}
-footer p{margin:10px 0;}
-footer a{color:white;margin:0 10px;font-size:20px;}
-footer a:hover{color:#cbd6ff;}
+.btn{
+padding:14px 35px;
+background:linear-gradient(45deg,#00aaff,#0088cc);
+color:#fff;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+.btn:hover{transform:scale(1.05);}
 
-.animate{opacity:0;transform:translateY(50px);transition:1s ease-out;}
-.animate.show{opacity:1;transform:translateY(0);}
-@media(max-width:768px){header{flex-direction:column;}nav{margin-top:10px;}nav a{margin-left:15px;margin-right:15px;}}
+section{padding:100px 20px;}
+section h2{text-align:center;font-size:36px;margin-bottom:50px;color:#0b1d59;}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+
+.card{
+background:#fff;
+padding:35px 20px;
+border-radius:15px;
+text-align:center;
+transition:.4s;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+.card i{font-size:40px;color:#0b1d59;margin-bottom:15px;}
+
+#team img{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+form input,form textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+form button{
+background:#0b1d59;
+color:#fff;
+padding:12px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+footer{
+background:#0b1d59;
+color:#fff;
+padding:60px 20px;
+}
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+footer a{color:#fff;text-decoration:none;}
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+border-top:1px solid rgba(255,255,255,0.2);
+padding-top:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:#fff;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@media(max-width:768px){
+nav ul{
+position:absolute;
+top:60px;
+right:-100%;
+background:#0b1d59;
+flex-direction:column;
+width:200px;
+padding:20px;
+transition:.3s;
+}
+nav ul.active{right:0;}
+.menu-toggle{display:block;}
+}
 </style>
 </head>
 <body>
 
 <header>
-<img src="logo.png" alt="ZeetaxSolutions Logo">
+<div class="container nav">
+<div class="logo">ZeetaxSolutions</div>
+
+<div class="menu-toggle"><i class="fas fa-bars"></i></div>
+
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#testimonials">Testimonials</a>
-<a href="#contact">Contact</a>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#team">Team</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
+</div>
 </header>
 
 <section class="hero" id="home">
-<div class="blob blob1"></div>
-<div class="blob blob2"></div>
-<h1>Professional Tax & Corporate Solutions</h1>
-<p>ZeetaxSolutions provides NTN Registration, Tax Filing, Company Registration and Corporate Services across Pakistan with professional excellence.</p>
-<a href="#contact" class="btn">Get Consultation</a>
+<div>
+<h1>Professional Tax & Corporate Experts</h1>
+<p>NTN • Tax Filing • Company Registration • SECP Compliance</p>
+<a href="#contact" class="btn">Free Consultation</a>
+</div>
 </section>
 
-<section class="section animate" id="about">
-<h2>About ZeetaxSolutions</h2>
-<p>We are a professional tax consultancy firm helping individuals and businesses with complete corporate and tax compliance services. Our mission is to provide transparent, reliable, and fast solutions to all clients.</p>
-<img src="https://via.placeholder.com/600x300" alt="About Image" style="margin-top:30px;border-radius:10px;">
-<div class="curved"></div>
-</section>
-
-<section class="section animate" id="services">
+<section id="services">
+<div class="container">
 <h2>Our Services</h2>
-<div class="services">
-<div class="card">
-<img src="https://via.placeholder.com/60" alt="NTN Registration Icon">
-<h3>NTN Registration</h3>
-<p>Fast and secure NTN registration services for individuals and companies.</p>
-</div>
-<div class="card">
-<img src="https://via.placeholder.com/60" alt="Tax Filing Icon">
-<h3>Income Tax Filing</h3>
-<p>Professional annual income tax return filing with complete compliance.</p>
-</div>
-<div class="card">
-<img src="https://via.placeholder.com/60" alt="Company Registration Icon">
-<h3>Company Registration</h3>
-<p>SECP company registration services with documentation support.</p>
-</div>
-<div class="card">
-<img src="https://via.placeholder.com/60" alt="Corporate Services Icon">
-<h3>Corporate Services</h3>
-<p>Business compliance, legal documentation and advisory services.</p>
-</div>
-<div class="card">
-<img src="https://via.placeholder.com/60" alt="Sales Tax Icon">
-<h3>Sales Tax Registration</h3>
-<p>Complete sales tax registration and monthly return filing services.</p>
-</div>
-<div class="card">
-<img src="https://via.placeholder.com/60" alt="Accounting Icon">
-<h3>Accounting Services</h3>
-<p>Bookkeeping, financial statements and business consultancy.</p>
+<div class="grid">
+<div class="card"><i class="fas fa-id-card"></i><h3>NTN Registration</h3></div>
+<div class="card"><i class="fas fa-file-invoice"></i><h3>Income Tax Filing</h3></div>
+<div class="card"><i class="fas fa-building"></i><h3>Company Registration</h3></div>
+<div class="card"><i class="fas fa-scale-balanced"></i><h3>SECP Compliance</h3></div>
+<div class="card"><i class="fas fa-trademark"></i><h3>Trademark</h3></div>
+<div class="card"><i class="fas fa-book"></i><h3>Bookkeeping</h3></div>
 </div>
 </div>
 </section>
 
-<section class="stats animate">
-<div class="stat">
-<h3>500+</h3>
-<p>Clients Served</p>
+<section id="team">
+<div class="container">
+<h2>Our Team</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6">
+<h3>Adv. Sahiba</h3>
+<p>CEO & Founder</p>
 </div>
-<div class="stat">
-<h3>5+</h3>
-<p>Years Experience</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603415526960-f8f0a5e1b8e6">
+<h3>Ali Raza</h3>
+<p>Senior Consultant</p>
 </div>
-<div class="stat">
-<h3>100%</h3>
-<p>Client Satisfaction</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589571894960-20bbe2828d0a">
+<h3>Fatima Noor</h3>
+<p>Corporate Advisor</p>
 </div>
-</section>
-
-<section class="testimonials animate" id="testimonials">
-<h2>Why People Choose Us</h2>
-<div class="testimonial-cards">
-<div class="testimonial">
-<img src="https://via.placeholder.com/60" alt="Client 1">
-<p>"Professional, fast, and reliable. Highly recommended for all tax and corporate services!"</p>
-<h4>- Ahmed Khan</h4>
-</div>
-<div class="testimonial">
-<img src="https://via.placeholder.com/60" alt="Client 2">
-<p>"ZeetaxSolutions made company registration a breeze. Excellent support!"</p>
-<h4>- Sara Ali</h4>
-</div>
-<div class="testimonial">
-<img src="https://via.placeholder.com/60" alt="Client 3">
-<p>"I got my NTN registration and tax filing done in record time. Very satisfied."</p>
-<h4>- Bilal Ahmed</h4>
 </div>
 </div>
 </section>
 
-<section class="section animate" id="contact">
+<section id="contact">
+<div class="container">
 <h2>Contact Us</h2>
-<div class="contact-form">
+<form>
 <input type="text" placeholder="Your Name">
 <input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Your Message"></textarea>
-<button>Send Message</button>
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
 </div>
 </section>
 
 <footer>
-<p><strong>ZeetaxSolutions</strong></p>
-<p>Professional Tax & Corporate Experts</p>
-<p>© 2026 ZeetaxSolutions. All Rights Reserved.</p>
+<div class="container footer-grid">
 <div>
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-twitter"></i></a>
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
+<h3>ZeetaxSolutions</h3>
+<p>Professional Tax & Corporate Services in Pakistan.</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<p><a href="#services">Services</a></p>
+<p><a href="#team">Team</a></p>
+<p><a href="#contact">Contact</a></p>
+</div>
+<div>
+<h4>Follow Us</h4>
+<p><a href="#">Facebook</a></p>
+<p><a href="#">Instagram</a></p>
+<p><a href="#">LinkedIn</a></p>
+<p><a href="#">TikTok</a></p>
+</div>
+</div>
+<div class="footer-bottom">
+© 2026 ZeetaxSolutions | All Rights Reserved
 </div>
 </footer>
 
+<a href="https://wa.me/923265831528" class="whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
 <script>
-// Scroll animations
-const animElements = document.querySelectorAll('.animate');
-window.addEventListener('scroll', () => {
-animElements.forEach(el => {
-  const top = el.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
-  if(top < windowHeight - 100){el.classList.add('show');}
-});
+const menuToggle=document.querySelector('.menu-toggle');
+const navLinks=document.querySelector('nav ul');
+menuToggle.addEventListener('click',()=>{
+navLinks.classList.toggle('active');
 });
 </script>
 
 </body>
   </html>
+
