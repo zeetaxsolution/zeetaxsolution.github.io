@@ -10,7 +10,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:#fff;color:#222;overflow-x:hidden;}
-
 .container{max-width:1200px;margin:auto;padding:0 20px;}
 
 header{
@@ -22,7 +21,6 @@ z-index:1000;
 }
 
 .nav{display:flex;justify-content:space-between;align-items:center;}
-
 .logo{color:#fff;font-size:24px;font-weight:700;}
 
 nav ul{list-style:none;display:flex;gap:25px;}
@@ -35,27 +33,22 @@ nav ul li a:hover{color:#00aaff;}
 height:100vh;
 background:linear-gradient(rgba(11,29,89,0.85),rgba(11,29,89,0.85)),
 url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85') center/cover no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:#fff;
-padding:20px;
+display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px;
 }
 
-.hero h1{font-size:50px;margin-bottom:20px;animation:fadeIn 2s;}
+.hero h1{font-size:50px;margin-bottom:20px;}
 .hero p{font-size:20px;margin-bottom:30px;}
 
 .btn{
 padding:14px 35px;
-background:linear-gradient(45deg,#00aaff,#0088cc);
-color:#fff;
+background:#ffffff;
+color:#0b1d59;
 border-radius:30px;
 text-decoration:none;
-font-weight:600;
+font-weight:700;
 transition:.3s;
 }
-.btn:hover{transform:scale(1.05);}
+.btn:hover{background:#00aaff;color:#fff;}
 
 section{padding:100px 20px;}
 section h2{text-align:center;font-size:36px;margin-bottom:50px;color:#0b1d59;}
@@ -63,93 +56,35 @@ section h2{text-align:center;font-size:36px;margin-bottom:50px;color:#0b1d59;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
 
 .card{
-background:#fff;
-padding:35px 20px;
-border-radius:15px;
-text-align:center;
-transition:.4s;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+background:#fff;padding:35px 20px;border-radius:15px;text-align:center;
+transition:.4s;box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
-}
+.card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,0.15);}
 .card i{font-size:40px;color:#0b1d59;margin-bottom:15px;}
 
 #team img{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:15px;
+width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:15px;
 }
 
-form{
-max-width:600px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-form input,form textarea{
-padding:12px;
-border:1px solid #ccc;
-border-radius:5px;
-}
-form button{
-background:#0b1d59;
-color:#fff;
-padding:12px;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
+.achievement{background:#0b1d59;color:#fff;text-align:center;}
+.achievement h2{color:#fff;}
+.counter{font-size:40px;font-weight:bold;margin-bottom:10px;}
 
-footer{
-background:#0b1d59;
-color:#fff;
-padding:60px 20px;
-}
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
+.review{background:#f8f9ff;}
+
+footer{background:#0b1d59;color:#fff;padding:60px 20px;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
 footer a{color:#fff;text-decoration:none;}
-.footer-bottom{
-text-align:center;
-margin-top:40px;
-border-top:1px solid rgba(255,255,255,0.2);
-padding-top:20px;
-}
+.footer-bottom{text-align:center;margin-top:40px;border-top:1px solid rgba(255,255,255,0.2);padding-top:20px;}
 
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:#fff;
-padding:15px;
-border-radius:50%;
-font-size:22px;
-}
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
+position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;
+padding:15px;border-radius:50%;font-size:22px;
 }
 
 @media(max-width:768px){
-nav ul{
-position:absolute;
-top:60px;
-right:-100%;
-background:#0b1d59;
-flex-direction:column;
-width:200px;
-padding:20px;
-transition:.3s;
-}
+nav ul{position:absolute;top:60px;right:-100%;background:#0b1d59;
+flex-direction:column;width:200px;padding:20px;transition:.3s;}
 nav ul.active{right:0;}
 .menu-toggle{display:block;}
 }
@@ -160,14 +95,14 @@ nav ul.active{right:0;}
 <header>
 <div class="container nav">
 <div class="logo">ZeetaxSolutions</div>
-
 <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-
 <nav>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
+<li><a href="#why">Why Us</a></li>
 <li><a href="#team">Team</a></li>
+<li><a href="#reviews">Reviews</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -196,24 +131,72 @@ nav ul.active{right:0;}
 </div>
 </section>
 
+<section id="why">
+<div class="container">
+<h2>Why People Choose Us</h2>
+<div class="grid">
+<div class="card"><i class="fas fa-clock"></i><h3>Fast Processing</h3></div>
+<div class="card"><i class="fas fa-shield-halved"></i><h3>100% Confidential</h3></div>
+<div class="card"><i class="fas fa-user-tie"></i><h3>Professional Experts</h3></div>
+<div class="card"><i class="fas fa-handshake"></i><h3>Trusted by Clients</h3></div>
+</div>
+</div>
+</section>
+
+<section class="achievement">
+<div class="container">
+<h2>Our Achievements</h2>
+<div class="grid">
+<div><div class="counter">500+</div><p>Happy Clients</p></div>
+<div><div class="counter">1000+</div><p>Tax Returns Filed</p></div>
+<div><div class="counter">300+</div><p>Companies Registered</p></div>
+<div><div class="counter">5+</div><p>Years Experience</p></div>
+</div>
+</div>
+</section>
+
 <section id="team">
 <div class="container">
 <h2>Our Team</h2>
 <div class="grid">
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6">
-<h3>Adv. Sahiba</h3>
+<h3>Advocate Sahiba</h3>
 <p>CEO & Founder</p>
 </div>
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1603415526960-f8f0a5e1b8e6">
 <h3>Ali Raza</h3>
 <p>Senior Consultant</p>
 </div>
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828d0a">
 <h3>Fatima Noor</h3>
 <p>Corporate Advisor</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="reviews" class="review">
+<div class="container">
+<h2>Client Reviews</h2>
+<div class="grid">
+<div class="card">
+<p>"Excellent service and quick response. Highly recommended!"</p>
+<h4>- Ahmed Khan</h4>
+</div>
+<div class="card">
+<p>"Very professional team. Company registration done smoothly."</p>
+<h4>- Sara Malik</h4>
+</div>
+<div class="card">
+<p>"Best tax consultants in Pakistan."</p>
+<h4>- Usman Ali</h4>
 </div>
 </div>
 </div>
@@ -233,24 +216,29 @@ nav ul.active{right:0;}
 
 <footer>
 <div class="container footer-grid">
+
 <div>
 <h3>ZeetaxSolutions</h3>
 <p>Professional Tax & Corporate Services in Pakistan.</p>
 </div>
+
 <div>
 <h4>Quick Links</h4>
 <p><a href="#services">Services</a></p>
-<p><a href="#team">Team</a></p>
-<p><a href="#contact">Contact</a></p>
+<p><a href="#why">Why Us</a></p>
+<p><a href="#reviews">Reviews</a></p>
 </div>
+
 <div>
 <h4>Follow Us</h4>
-<p><a href="#">Facebook</a></p>
-<p><a href="#">Instagram</a></p>
-<p><a href="#">LinkedIn</a></p>
-<p><a href="#">TikTok</a></p>
+<p><a href="https://www.facebook.com/profile.php?id=61587608694819" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></p>
+<p><a href="https://www.instagram.com/zeetax183/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
+<p><a href="https://www.linkedin.com/in/adv-sahiba-597a433aa" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+<p><a href="https://tiktok.com/@zeetaxsolutions" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></p>
 </div>
+
 </div>
+
 <div class="footer-bottom">
 © 2026 ZeetaxSolutions | All Rights Reserved
 </div>
@@ -270,4 +258,3 @@ navLinks.classList.toggle('active');
 
 </body>
   </html>
-
