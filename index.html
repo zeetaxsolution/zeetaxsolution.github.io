@@ -129,14 +129,138 @@ border-radius:50%;z-index:1000
 </nav>
 </div>
 </header>
+<!-- HERO SECTION START -->
+<section class="hero">
+  <div class="hero-content">
+    
+    <h1 class="hero-title">
+      <span class="typing"></span>
+    </h1>
 
-<section class="hero" id="home">
-<div class="hero-content container">
-<h1>Professional Tax & Corporate Services</h1>
-<p>NTN • Tax Filing • SECP Registration • Corporate Advisory</p>
-<a href="#contact" class="btn">Free Consultation</a>
-</div>
+    <p class="hero-subtitle">
+      PSEB Registration • SECP Compliance • NTN Registration <br>
+      We Manage Your Tax & Corporate Matters
+    </p>
+
+    <a href="#contact" class="hero-btn">Free Consultation</a>
+
+    <!-- STATS SECTION -->
+    <div class="hero-stats">
+      <div>
+        <h2 class="counter" data-target="500">0</h2>
+        <p>Clients Served</p>
+      </div>
+      <div>
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Years Experience</p>
+      </div>
+      <div>
+        <h2 class="counter" data-target="100">0</h2>
+        <p>Company Registrations</p>
+      </div>
+    </div>
+
+  </div>
 </section>
+
+<style>
+
+ 
+
+
+
+/* STATS */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-stats h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: #00e0ff;
+}
+
+.hero-stats p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(40px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero-title { font-size: 24px; }
+  .hero-subtitle { font-size: 15px; }
+  .hero-stats { gap: 20px; }
+}
+</style>
+
+<script>
+/* TYPING EFFECT */
+const textArray = [
+  "Professional Tax Experts",
+  "Company Registration Specialists",
+  "SECP & PSEB Compliance Services"
+];
+
+let typingElement = document.querySelector(".typing");
+let textIndex = 0;
+let charIndex = 0;
+
+function typeEffect() {
+  if (charIndex < textArray[textIndex].length) {
+    typingElement.textContent += textArray[textIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeEffect, 60);
+  } else {
+    setTimeout(eraseEffect, 1500);
+  }
+}
+
+function eraseEffect() {
+  if (charIndex > 0) {
+    typingElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseEffect, 30);
+  } else {
+    textIndex = (textIndex + 1) % textArray.length;
+    setTimeout(typeEffect, 300);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  typeEffect();
+});
+
+/* COUNTER EFFECT */
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+  counter.innerText = "0";
+  const updateCounter = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+    const increment = target / 100;
+
+    if(count < target){
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCounter, 20);
+    } else {
+      counter.innerText = target + "+";
+    }
+  };
+  updateCounter();
+});
+</script>
+<!-- HERO SECTION END -->
+
 
 <section class="about" id="about">
 <div class="container">
@@ -248,3 +372,4 @@ alert("Message Sent Successfully!");
 
 </body>
   </html>
+
